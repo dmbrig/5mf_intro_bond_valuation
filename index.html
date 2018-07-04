@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>TITLE</title>
+    <title>An Introduction to Bond Valuation</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
@@ -29,7 +29,7 @@
       <div class="slides">
 	<section>
 	  <section data-background-image="./city_skyline.jpg">
-	    <h2>TITLE</h2>
+	    <h2>An Introduction to Bond Valuation</h2>
 	    <br>
 	    <br>
 	    <br>
@@ -38,33 +38,212 @@
 	    <br>
 	  </section>
 	  <section>
-	    <h2>TITLE</h2>
+	    <h2>An Introduction to Bond Valuation</h2>
 	    <br>
 	    <p> MATT BRIGIDA </p>
-	    <p> Associate Professor of Finance (SUNY Polytechnic Institute) & Financial Education Advisor, Milken Institute </p>
+	    <p> Associate Professor of Finance (SUNY Polytechnic Institute) & Financial Education Advisor, Milken Institute Center for Financial Markets</p>
 	  </section>
 	</section>
 
+<section data-markdown>
+	<textarea data-template>
+	## Bonds
 
-	<section>
-	  <h3></h3>
-	  <p align="left"></p>
+The value of a bond is the present value of the discounted expected cash flows.  So to value the bond we'll need information on the cash flows and discount rate.  This information is summarized in the:
 
-	</section>
+- Coupon rate
+- Par (or face) value
+- Years to maturity
+- Payment period (usually semiannual)
+- Yield-to-Maturity ($YTM$)
 
-	<section>
-	  <h3></h3>
+	</textarea>
+</section>
 
-	</section>
+<section data-markdown>
+	<textarea data-template>
+## Cash Flow Structure
+
+<p align="left">For example, say a bond has a 5% coupon rate, a \$1000 par value, 6 years to maturity, makes payments annually, and lastly has a 8% $YTM$ (we'll define YTM in greater detail a little later on).</p>
+
+- Then the bond will pay $0.05(\$1000) = \$50$ every year for 6 years, with an additional \$1000 in year 6.  In other words, the cash flows are \$50 in years 1 through 5, and \$1050 in year 6.
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+| Year | 1 | 2 | 3 | 4 | 5 | 6 |
+| ---- | - | - | - | - | - | - |
+|      | $50 |  $50 |  $50 |  $50 |  $50 |  $1050 |
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Bond Value
+
+<p align="left">To find the value of the bond we simply sum the present value of each individual cash flow.  So we sum the values in the table below.  Note $1.08 = (1 + YTM)$ where the yield-to-maturity is 8%.</p>
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+
+| Year | 1 | 2 | 3 | 4 | 5 | 6 |
+| ---- | - | - | - | - | - | - |
+| | $\frac{\$50}{1.08}$ | $\frac{\$50}{1.08^{2}}$ |  $\frac{\$50}{1.08^{3}}$ | $\frac{\$50}{1.08^{4}}$ | $\frac{\$50}{1.08^{5}}$ | $\frac{\$1050}{1.08^{6}}$ | 
+
+<p align="left">The sum of the present value of these cash flows is \$INSERT!!!.</p>
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Bond Value
+
+<p align="left">The value of the bond is often written as: $B_0 = \sum_{i=1}^6 \frac{50}{1.08^i} + \frac{1000}{1.08^{6}} = \$INSERT!!!$</p>
+
+<p align="left">Which can be rewritten to use the present value of an ordinary annuity formula: $B_0 = \$50\left(\frac{1-\frac{1}{1.08^{6}}}{.08}\right) + \frac{\$1000}{1.08^{6}} = \$INSERT!!!$</p>
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+	  <p align="left">These calculations are equivalent, and the differences are only matters of notation.  When using in a spreadsheet, the calculations are usually laid out in a form similar to the table.  The annuity formula was mainly taught because prior to spreadsheets people were doing these calculations by calculator.</p>
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Semiannual Interest
+
+Most coupon bonds pay semiannual interest.  Rates are always quoted annually however.  So what this means is that the period of the bond is 6 months, and the coupon rate per period is $\frac{5\%}{2} = 2.5\%$ and the $YTM$ is $\frac{8\%}{2} = 4\%$.
+
+- The value of the bond is then: $B_0 = \sum_{i=1}^{20}\frac{\$25}{1.04^i} + \frac{\$1000}{1.04^{20}} = \$796.14$
+
+- It is important to discount the \$1000 at 4\% over 20 periods, and not at 8\% over 10 periods.  This is because the effective rate is 4\% semiannually, which is not equal to 8\% annually (see the time-value-of-money presentation).
+
+- Food for thought: The bond value in the semiannual case was lower than in the annual.  Is this always the case? See the last slide for the answer.
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Bond Valuation Interactive App
+
+The next slide contains an app which will allow you to value different coupon bonds.  Try to value them in a spreadsheet (or whatever software you choose) and check your answer with the app.
+
+- You can also use the app to see how the bond's value is affected by changes in its inputs.  
+
+	</textarea>
+</section>
+
+
 
 
 <!-- Insert App -->
 <!-- <section data-background-image="./code_image.jpg"> -->
-<!--   <div class="stretch"> -->
+  <!--   <div class="stretch"> -->
+    <!-- <h3>Bond Valuation Interactive App</h3> -->
 <!--     <iframe src="https://micfm.shinyapps.io/limit_order_book_app1/" height="100%" width="100%"></iframe> -->
 <!--   </div> -->
 <!-- </section> -->
 <!-- </section> -->
+
+
+<section data-markdown>
+	<textarea data-template>
+
+## The $YTM$
+
+The $YTM$ is the single discount rate for which the present value of all the bond's future cash flows equals the bond's market price.
+
+- Equivalently, we can define the $YTM$ as the internal rate of return on the bond  ($IRR$).
+
+-  This means you can find the $YTM$ using a spreadsheet by setting the bond price as a cash outflow, and the bond's cash flows as inflows, and then use the $=IRR()$ function.
+
+The $YTM$ is an annual quoted rate, which means it is the rate per period multiplied by the number of periods in a year.  So if you calculate the $IRR$ of a bond with semiannual payments, you must multiply it by $2$ to get the $YTM$.  
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## $YTM$ Interactive App
+
+You can practice calculating the $YTM$, and check your answers with the app on the following slide.
+
+	</textarea>
+</section>
+
+
+<!-- Insert App -->
+<!-- <section data-background-image="./code_image.jpg"> -->
+  <!--   <div class="stretch"> -->
+    <!-- <h3>Calculating the $YTM$</h3> -->
+<!--     <iframe src="https://micfm.shinyapps.io/limit_order_book_app1/" height="100%" width="100%"></iframe> -->
+<!--   </div> -->
+<!-- </section> -->
+<!-- </section> -->
+
+<section data-markdown>
+	<textarea data-template>
+
+## Do We Always Earn the $YTM$?
+
+One misconception about bonds is that if you buy a bond with a 9\% $YTM$ and hold it to maturity, then so long as the bond doesn't default, you will earn 9\% per year.
+
+- This is *only* true for zero coupon bonds.
+
+- For coupon bonds, in the $YTM$ calculation it is assumed you can *reinvest* coupon payments at the $YTM$.  In reality, you will reinvest at whatever the rate is when you receive the coupon payment. 
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## A Note on $YTM$
+
+To get the value of a bond, we discount each cash flow at the $YTM$.  However, to get the $YTM$, we set the discounted cash flows equal to the market price and then solve for the discount rate ($YTM$).  This, of course, is circular.
+
+- The $YTM$ is really a way to quote the bond's return, so you can compare it with others.  This is done because the bond's price is not that informative.
+
+- Two 10-year U.S. Treasury notes will have the same $YTM$, but can have vastly different prices. A 10-year note issued yesterday will trade near \$1000 because its $YTM$ is very close to its coupon.  A 30-year Treasury bond issued 20 years ago (at a say 18\% coupon) is now a 10-year Treasury note with a price based on its $YTM$ and coupon rate differential. The bonds will have different prices, but the same $YTM$.      
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Semiannual vs Annual Values
+
+Above, in the section on Semiannual Interest, we asked whether the effective semiannual rate was always lower than the effective annual rate. The answer is:
+
+-  If the bond is trading at a discount ($YTM$ above the coupon rate), then switching from annual to semiannual will lower the value of the bond.
+
+-  However, if the bond is trading at a premium ($YTM$ below the coupon rate), then switching from annual to semiannual will raise the value of the bond.
+
+The reason is due to compounding.  When we switch from annual to semiannual we are now compounding the rate---and compounding has a larger effect on higher rates.  So it has a larger effect on the $YTM$ or coupon, depending on which is higher.
+
+	</textarea>
+</section>
 
 
 <section>
