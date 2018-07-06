@@ -49,7 +49,7 @@
 	<textarea data-template>
 	## Bonds
 
-The value of a bond is the present value of the discounted expected cash flows.  So to value the bond we'll need information on the cash flows and discount rate.  This information is summarized in the:
+	The <b class="fragment highlight-green">value of a bond</b> is the <b class="fragment highlight-green">present value of the discounted expected cash flows</b>.  So to value the bond we'll need information on the cash flows and discount rate.  This information is summarized in the:
 
 - Coupon rate
 - Par (or face) value
@@ -86,7 +86,7 @@ The value of a bond is the present value of the discounted expected cash flows. 
 
 ## Bond Value
 
-<p align="left">To find the value of the bond we simply sum the present value of each individual cash flow.  So we sum the values in the table below.  Note $1.08 = (1 + YTM)$ where the yield-to-maturity is 8%.</p>
+<p align="left">To find the <b class="fragment highlight-green">value of the bond we simply sum the present value of each individual cash flow</b>.  So we sum the values in the table below.  Note $1.08 = (1 + YTM)$ where the yield-to-maturity is 8%.</p>
 
 	</textarea>
 </section>
@@ -94,12 +94,11 @@ The value of a bond is the present value of the discounted expected cash flows. 
 <section data-markdown>
 	<textarea data-template>
 
-
 | Year | 1 | 2 | 3 | 4 | 5 | 6 |
 | ---- | - | - | - | - | - | - |
 | | $\frac{\$50}{1.08}$ | $\frac{\$50}{1.08^{2}}$ |  $\frac{\$50}{1.08^{3}}$ | $\frac{\$50}{1.08^{4}}$ | $\frac{\$50}{1.08^{5}}$ | $\frac{\$1050}{1.08^{6}}$ | 
 
-<p align="left">The sum of the present value of these cash flows is \$INSERT!!!.</p>
+<p align="left">The sum of the present value of these cash flows is \$861.31.</p>
 
 	</textarea>
 </section>
@@ -109,9 +108,9 @@ The value of a bond is the present value of the discounted expected cash flows. 
 
 ## Bond Value
 
-<p align="left">The value of the bond is often written as: $B_0 = \sum_{i=1}^6 \frac{50}{1.08^i} + \frac{1000}{1.08^{6}} = \$INSERT!!!$</p>
+<p align="left">The value of the bond is often written as: $B_0 = \sum_{i=1}^6 \frac{50}{1.08^i} + \frac{1000}{1.08^{6}} = \$861.31$</p>
 
-<p align="left">Which can be rewritten to use the present value of an ordinary annuity formula: $B_0 = \$50\left(\frac{1-\frac{1}{1.08^{6}}}{.08}\right) + \frac{\$1000}{1.08^{6}} = \$INSERT!!!$</p>
+<p align="left">Which can be rewritten to use the present value of an ordinary annuity formula: $B_0 = \$50\left(\frac{1-\frac{1}{1.08^{6}}}{.08}\right) + \frac{\$1000}{1.08^{6}} = \$861.31$</p>
 
 	</textarea>
 </section>
@@ -119,7 +118,7 @@ The value of a bond is the present value of the discounted expected cash flows. 
 <section data-markdown>
 	<textarea data-template>
 
-	  <p align="left">These calculations are equivalent, and the differences are only matters of notation.  When using in a spreadsheet, the calculations are usually laid out in a form similar to the table.  The annuity formula was mainly taught because prior to spreadsheets people were doing these calculations by calculator.</p>
+	  <p align="left"><b class="fragment highlight-green">These calculations are equivalent, and the differences are only matters of notation</b>.  When using in a spreadsheet, the calculations are usually laid out in a form similar to the table.  The annuity formula was mainly taught because prior to spreadsheets people were doing these calculations by calculator.</p>
 
 	</textarea>
 </section>
@@ -137,7 +136,7 @@ The value of a bond is the present value of the discounted expected cash flows. 
 <section data-markdown>
 	<textarea data-template>
 
-- The value of the bond is then: $B_0 = \sum_{i=1}^{20}\frac{\$25}{1.04^i} + \frac{\$1000}{1.04^{20}} = \$796.14$
+- The value of the bond is then: $B_0 = \sum_{i=1}^{20}\frac{\$25}{1.04^i} + \frac{\$1000}{1.04^{20}} = \$859.22$
 
 - It is important to discount the \$1000 at 4% over 20 periods, and not at 8% over 10 periods.  This is because the effective rate is 4% semiannually, which is not equal to 8% annually (see the time-value-of-money presentation).
 
